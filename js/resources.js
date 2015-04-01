@@ -18,6 +18,7 @@ game.resources = [
         {name: "stars", type:"image", src: "data/img/stars.png"},
         {name: "rain", type:"image", src: "data/img/rain.png"},
         {name: "darkcloud", type:"image", src: "data/img/darkcloud.png"},
+        {name: "title-screen", type:"image", src: "data/img/title.png"},
 	/* Atlases 
 	 * @example
 	 * {name: "example_tps", type: "tps", src: "data/img/example_tps.json"},
