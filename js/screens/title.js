@@ -13,10 +13,18 @@ game.TitleScreen = me.ScreenObject.extend({
                         this.font = new me.Font("Arial", 46, "white");
                     },
                     
-                    draw: function(){
+                    draw: function(render){
                         this.font.draw(render.getContext(), "Awesomenauts", 450, 130);
+                        this.font.draw(render.getContext(), "Press ENTER to play!", 250, 530);
                     }
                 })));
+                
+                this.handler = me.event.subscribe(me.event.KEYDOWN, function (action, keyCode, edge){
+                    if(action === "start"){
+                        me.state.change(me.state.PLAY);
+                    }
+                });
+                
 	},
 	
 	
@@ -24,6 +32,7 @@ game.TitleScreen = me.ScreenObject.extend({
 	 *  action to perform when leaving this screen (state change)
 	 */
 	onDestroyEvent: function() {
-		; // TODO
+		me.input.unbindKey(me.input.KEY.ENTER); 
+                me.event.unsubscribe(this.handler);
 	}
 });
