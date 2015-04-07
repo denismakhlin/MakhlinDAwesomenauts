@@ -55,7 +55,7 @@ game.PlayerEntity = me.Entity.extend({
     update: function(delta) {
         this.now = new Date().getTime();
         
-        this.checkIfDead();
+        this.dead = this.checkIfDead();
         
         this.checkKeyPressesAndMove();
         
