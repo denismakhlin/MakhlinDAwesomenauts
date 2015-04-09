@@ -21,6 +21,9 @@ game.resources = [
         {name: "title-screen", type:"image", src: "data/img/title.png"},
         {name: "pipe", type:"image", src: "data/img/pipe.png"},
         {name: "zombiesheet", type:"image", src: "data/img/zombiesheet.png"},
+        {name: "space", type:"image", src: "data/img/space.png"},
+        {name: "spaceship", type:"image", src: "data/img/spaceship.png"},
+        {name: "planets", type:"image", src: "data/img/planets.png"},
 	/* Atlases 
 	 * @example
 	 * {name: "example_tps", type: "tps", src: "data/img/example_tps.json"},
@@ -33,7 +36,8 @@ game.resources = [
  	 */
 
          {name: "level01", type: "tmx", src: "data/map/test.tmx"},
-         {name: "level02", type: "tmx", src: "data/map/test2.tmx"}
+         {name: "level02", type: "tmx", src: "data/map/test2.tmx"},
+         {name: "level03", type: "tmx", src: "data/map/test3.tmx"}
          
 	/* Background music. 
 	 * @example

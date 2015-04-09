@@ -73,7 +73,7 @@ game.PlayerEntity = me.Entity.extend({
       if (this.health <= 0){
             return true;
         }
-            return true;
+            return false;
     },
     
     checkKeyPressesAndMove: function(){
