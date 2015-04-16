@@ -5,8 +5,10 @@
         <group>
             <file>file:/C:/xampp/htdocs/MakhlinDAwesomenauts/js/resources.js</file>
             <file>file:/C:/xampp/htdocs/MakhlinDAwesomenauts/js/screens/play.js</file>
+            <file>file:/C:/xampp/htdocs/MakhlinDAwesomenauts/js/screens/spendExp.js</file>
             <file>file:/C:/xampp/htdocs/MakhlinDAwesomenauts/index.php</file>
             <file>file:/C:/xampp/htdocs/MakhlinDAwesomenauts/js/entities/entities.js</file>
+            <file>file:/C:/xampp/htdocs/MakhlinDAwesomenauts/js/screens/title.js</file>
             <file>file:/C:/xampp/htdocs/MakhlinDAwesomenauts/js/game.js</file>
         </group>
     </open-files>
