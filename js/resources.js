@@ -25,6 +25,7 @@ game.resources = [
         {name: "spaceship", type:"image", src: "data/img/spaceship.png"},
         {name: "planets", type:"image", src: "data/img/planets.png"},
         {name: "exp-screen", type:"image", src: "data/img/char_select.png"},
+        {name: "gold-screen", type:"image", src: "data/img/spend.png"},
 	/* Atlases 
 	 * @example
 	 * {name: "example_tps", type: "tps", src: "data/img/example_tps.json"},
