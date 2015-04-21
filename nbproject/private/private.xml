@@ -4,12 +4,11 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/xampp/htdocs/MakhlinDAwesomenauts/js/resources.js</file>
-            <file>file:/C:/xampp/htdocs/MakhlinDAwesomenauts/js/screens/play.js</file>
-            <file>file:/C:/xampp/htdocs/MakhlinDAwesomenauts/js/screens/spendExp.js</file>
             <file>file:/C:/xampp/htdocs/MakhlinDAwesomenauts/index.php</file>
-            <file>file:/C:/xampp/htdocs/MakhlinDAwesomenauts/js/entities/entities.js</file>
-            <file>file:/C:/xampp/htdocs/MakhlinDAwesomenauts/js/screens/title.js</file>
-            <file>file:/C:/xampp/htdocs/MakhlinDAwesomenauts/js/game.js</file>
+            <file>file:/C:/xampp/htdocs/MakhlinDAwesomenauts/js/gamemanagers/HeroDeathManager.js</file>
+            <file>file:/C:/xampp/htdocs/MakhlinDAwesomenauts/js/screens/loadProfile.js</file>
+            <file>file:/C:/xampp/htdocs/MakhlinDAwesomenauts/js/gamemanagers/GameManager.js</file>
+            <file>file:/C:/xampp/htdocs/MakhlinDAwesomenauts/js/screens/newProfile.js</file>
         </group>
     </open-files>
 </project-private>

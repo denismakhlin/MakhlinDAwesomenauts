@@ -1,6 +1,6 @@
 game.SpendExp = me.ScreenObject.extend({
 	onResetEvent: function() {	
-		me.game.world.addChild(new me.Sprite(0, 0, me.loader.getImage('exp-screen')), -10); // TODO
+		me.game.world.addChild(new me.Sprite(0, 0, me.loader.getImage('background')), -10); // TODO
                 
                 me.input.bindKey(me.input.KEY.F1, "F1");
                 me.input.bindKey(me.input.KEY.F2, "F2");
