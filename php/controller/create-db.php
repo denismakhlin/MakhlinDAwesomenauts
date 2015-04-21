@@ -17,13 +17,6 @@ require_once(__DIR__ ."/../model/config.php");
             . "exp3 int(4), "
             . "exp4 int(4), "
             . "PRIMARY KEY (id))");
-//      Below it tells me if tables were made      
-    if($query) {
-        
-    }
-//      Below it tells me if tables were not made
-    else {
-        echo "<p style='color: transparent'>" . $_SESSION["connection"]->error . "</p>";
-    }
+
   
 
