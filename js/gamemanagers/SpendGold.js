@@ -47,7 +47,7 @@ game.SpendGold = Object.extend({
    setBuyText: function(){
         game.data.buytext = new (me.Renderable.extend({
                     init: function(){
-                        this._super(me.Renderable, 'init', [game.data.pausedPos.x, game.data.pausePos.y, 10, 300, 50]);
+                        this._super(me.Renderable, 'init', [game.data.pausePos.x, game.data.pausePos.y, 10, 300, 50]);
                         this.font = new me.Font("Arial", 26, "white");
                         this.updateWhenPaused = true;
                         this.alwaysUpdate = true;
@@ -56,11 +56,11 @@ game.SpendGold = Object.extend({
                     draw: function(render){
                         this.font.draw(render.getContext(), "PRESS F1-F6 TO BUY, B TO EXIT. Current Gold: " + game.data.gold, this.pos.x, this.pos.y);
                         this.font.draw(render.getContext(), "Skill 1: Increase Damage | Current Level: " + game.data.skill1 + " Cost: " + ((game.data.skill1+1)*10),this.pos.x, this.pos.y);
-                        this.font.draw(render.getContext(), "Skill 2: Run Faster! Current Level: " + game.data.skill2 + " Cost: " + ((game.data.skill2+1)*10),this.pos.x, this.pos.y);
-                        this.font.draw(render.getContext(), "Skill 3: Increase Health! Current Level: " + game.data.skill3 + " Cost: " + ((game.data.skill3+1)*10), this.pos.x, this.pos.y);
-                        this.font.draw(render.getContext(), "Q Ability: Speed Burst | Current Level: " + game.data.ability1 + " Cost: " + ((game.data.ability1+1)*10), this.pos.x, this.pos.y);
-                        this.font.draw(render.getContext(), "W Ability: Eat Your Creep For Health: " + game.data.ability2 + " Cost: " + ((game.data.ability2+1)*10), this.pos.x, this.pos.y);
-                        this.font.draw(render.getContext(), "E Ability: Throw Your Spear: " + game.data.ability3 + " Cost: " + ((game.data.ability3+1)*10), this.pos.x, this.pos.y);
+                        this.font.draw(render.getContext(), "Skill 2: Run Faster! Current Level: " + game.data.skill2 + " Cost: " + ((game.data.skill2+1)*10),this.pos.x, this.pos.y + 40);
+                        this.font.draw(render.getContext(), "Skill 3: Increase Health! Current Level: " + game.data.skill3 + " Cost: " + ((game.data.skill3+1)*10), this.pos.x, this.pos.y + 80);
+                        this.font.draw(render.getContext(), "Q Ability: Speed Burst | Current Level: " + game.data.ability1 + " Cost: " + ((game.data.ability1+1)*10), this.pos.x, this.pos.y + 120);
+                        this.font.draw(render.getContext(), "W Ability: Eat Your Creep For Health: " + game.data.ability2 + " Cost: " + ((game.data.ability2+1)*10), this.pos.x, this.pos.y + 160);
+                        this.font.draw(render.getContext(), "E Ability: Throw Your Spear: " + game.data.ability3 + " Cost: " + ((game.data.ability3+1)*10), this.pos.x, this.pos.y + 200);
                     }
                 }));  
         me.game.world.addChild(game.data.buytext, 35);        

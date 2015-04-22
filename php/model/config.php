@@ -1,5 +1,3 @@
-<!--Below is the starting tag you need to begin writing php code it is not
-closed like it is in my index.php page-->
 <?php
 
 require_once(__DIR__ . "/database.php");
