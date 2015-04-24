@@ -1,5 +1,6 @@
 game.LoadProfile = me.ScreenObject.extend({
-	onResetEvent: function() {	
+	onResetEvent: function() {
+                me.audio.playTrack("load-music");
 		me.game.world.addChild(new me.Sprite(0, 0, me.loader.getImage('background')), -10); // TODO
                 
                 document.getElementById("input").style.visibility = "visible";
@@ -28,6 +29,7 @@ game.LoadProfile = me.ScreenObject.extend({
 	onDestroyEvent: function() {
                document.getElementById("input").style.visibility = "hidden";
                document.getElementById("load").style.visibility = "hidden"; 
+               me.audio.stopTrack("load-music");
 	}
 });
 

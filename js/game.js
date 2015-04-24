@@ -65,7 +65,7 @@ var game = {
         console.log(game.data.exp2);
 
 	// Initialize the audio.
-	me.audio.init("mp3,ogg");
+	me.audio.init("mp3");
 
 	// Set a callback to run when loading is complete.
 	me.loader.onload = this.loaded.bind(this);

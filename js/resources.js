@@ -28,6 +28,9 @@ game.resources = [
         {name: "gold-screen", type:"image", src: "data/img/spend.png"},
         {name: "load-screen", type:"image", src: "data/img/char_select.png"},
         {name: "new-screen", type:"image", src: "data/img/newpic.png"},
+        {name: "cabin", type:"image", src: "data/img/cabin.png"},
+        {name: "forest", type:"image", src: "data/img/forest.png"},
+        {name: "dirt", type:"image", src: "data/img/dirt.png"},
 	/* Atlases 
 	 * @example
 	 * {name: "example_tps", type: "tps", src: "data/img/example_tps.json"},
@@ -41,12 +44,13 @@ game.resources = [
 
          {name: "level01", type: "tmx", src: "data/map/test.tmx"},
          {name: "level02", type: "tmx", src: "data/map/test2.tmx"},
-         {name: "level03", type: "tmx", src: "data/map/test3.tmx"}
+         {name: "level03", type: "tmx", src: "data/map/test3.tmx"},
          
-	/* Background music. 
-	 * @example
-	 * {name: "example_bgm", type: "audio", src: "data/bgm/"},
-	 */	
+//      Background music. 
+
+        {name: "background-music", type: "audio", src: "data/bgm/"},
+        {name: "load-music", type: "audio", src: "data/bgm2/"}
+	 	
 
 	/* Sound effects. 
 	 * @example

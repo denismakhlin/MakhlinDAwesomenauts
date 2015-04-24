@@ -24,7 +24,7 @@ game.PlayerEntity = me.Entity.extend({
                 }
             }]);
     },
-    
+
     setPlayerTimers: function(){
         this.now = new Date().getTime();
         this.lastHit = this.now;
