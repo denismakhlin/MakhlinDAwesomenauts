@@ -1,13 +1,13 @@
 game.EnemyBaseEntity = me.Entity.extend({
             init: function(x, y, settings) {
                 this._super(me.Entity, 'init', [x, y, {
-                        image: "tower",
-                        width: 100,
-                        height: 100,
-                        spritewidth: "100",
-                        spriteheight: "100",
+                        image: "cabin",
+                        width: 350,
+                        height: 347,
+                        spritewidth: "350",
+                        spriteheight: "347",
                         getShape: function() {
-                            return (new me.Rect(0, 0, 100, 70)).toPolygon();
+                            return (new me.Rect(0, 0, 350, 347)).toPolygon();
                         }
                     }]);
                 this.broken = false;

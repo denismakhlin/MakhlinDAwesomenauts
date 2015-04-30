@@ -7,7 +7,7 @@ game.ExperienceManager = Object.extend({
     update: function(){
         if(game.data.win === true && !this.gameover){
             this.gameOver(true);
-            alert("YU WIN!");
+            alert("YOU WIN!");
         }else if(game.data.win === false && !this.gameover){
             this.gameOver(false);
             alert("YOU LOSE!");

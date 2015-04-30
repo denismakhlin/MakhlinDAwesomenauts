@@ -10,7 +10,7 @@ game.TitleScreen = me.ScreenObject.extend({
                     },
                     
                     draw: function(render){
-                        this.font.draw(render.getContext(), "START A NEW GAME", this.pos.x, this.pos.y);  
+                        this.font.draw(render.getContext(), "*START A NEW GAME", this.pos.x, this.pos.y);  
                     },
                     
                     update: function(dt){
@@ -31,11 +31,11 @@ game.TitleScreen = me.ScreenObject.extend({
                     },
                     
                     draw: function(render){
-                        this.font.draw(render.getContext(), "CONTINUE", this.pos.x, this.pos.y);  
+                        this.font.draw(render.getContext(), "*CONTINUE", this.pos.x, this.pos.y);  
                     },
                     
                     update: function(dt){
-//                        me.audio.playTrack("background-music");
+    //                        me.audio.playTrack("background-music");
                         
                         
                         return true; 
@@ -57,7 +57,7 @@ game.TitleScreen = me.ScreenObject.extend({
                     },
                     
                     draw: function(render){
-                        this.font.draw(render.getContext(), "BUY WEAPONS", this.pos.x, this.pos.y);  
+                        this.font.draw(render.getContext(), "*BUY WEAPONS", this.pos.x, this.pos.y);  
                     },
                     
                     update: function(dt){

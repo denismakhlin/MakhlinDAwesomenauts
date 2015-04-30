@@ -8,7 +8,6 @@ game.resources = [
         {name: "background-tiles", type:"image", src: "data/img/background-tiles.png"},
         {name: "meta-tiles", type:"image", src: "data/img/meta-tiles.png"},
         {name: "background", type:"image", src: "data/img/background.png"},
-        {name: "player", type:"image", src: "data/img/orcSpear.png"},
         {name: "tower", type:"image", src: "data/img/tower_round.svg.png"},
         {name: "creep1", type:"image", src: "data/img/brainmonster.png"},
         {name: "lampost", type:"image", src: "data/img/lampost.png"},
@@ -31,6 +30,9 @@ game.resources = [
         {name: "cabin", type:"image", src: "data/img/cabin.png"},
         {name: "forest", type:"image", src: "data/img/forest.png"},
         {name: "dirt", type:"image", src: "data/img/dirt.png"},
+        {name: "oldhouse", type:"image", src: "data/img/oldhouse.png"},
+        {name: "creep1", type:"image", src: "data/img/skeletonDagger.png"},
+        {name: "player", type:"image", src: "data/img/myplayer.png"},
 	/* Atlases 
 	 * @example
 	 * {name: "example_tps", type: "tps", src: "data/img/example_tps.json"},
@@ -49,7 +51,10 @@ game.resources = [
 //      Background music. 
 
         {name: "background-music", type: "audio", src: "data/bgm/"},
-        {name: "load-music", type: "audio", src: "data/bgm2/"}
+        {name: "load-music", type: "audio", src: "data/bgm2/"},
+        {name: "run-sound", type: "audio", src: "data/bgm3/"},
+        {name: "swoosh", type: "audio", src: "data/bgm4/"},
+        {name: "nature", type: "audio", src: "data/bgm5/"}
 	 	
 
 	/* Sound effects. 

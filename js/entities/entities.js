@@ -79,6 +79,7 @@ game.PlayerEntity = me.Entity.extend({
     checkKeyPressesAndMove: function(){
         if (me.input.isKeyPressed("right")) {
             this.moveRight();
+            
         } else if (me.input.isKeyPressed("left")) {
             this.moveLeft();
         } else {
@@ -92,7 +93,15 @@ game.PlayerEntity = me.Entity.extend({
             
         }  
         
+        
+      
         this.attacking = me.input.isKeyPressed("attack");
+        
+        if (this.renderable.isCurrentAnimation('attack')) {
+            me.audio.stopTrack("run-sound");
+        }
+        
+        
     },
     
     moveRight: function(){
@@ -131,10 +140,14 @@ game.PlayerEntity = me.Entity.extend({
         else if (this.body.vel.x !== 0 && !this.renderable.isCurrentAnimation("attack")) {
             if (!this.renderable.isCurrentAnimation("walk")) {
                 this.renderable.setCurrentAnimation("walk");
+                me.audio.playTrack("run-sound");
             }
         } else if (!this.renderable.isCurrentAnimation("attack")) {
             this.renderable.setCurrentAnimation("idle");
-        }  
+            me.audio.stopTrack("run-sound"); 
+        }  else if (this.renderable.isCurrentAnimation("attack")){
+            me.audio.stopTrack("run-sound");
+        } 
     },
     
     loseHealth: function(damage){
@@ -168,6 +181,7 @@ game.PlayerEntity = me.Entity.extend({
             if(this.renderable.isCurrentAnimation("attack") && this.now-this.lastHit >= game.data.playerAttackTimer){
                 this.lastHit = this.now;
                 response.b.loseHealth(game.data.playerAttack);
+                
             }
         },
         
@@ -211,7 +225,7 @@ game.PlayerEntity = me.Entity.extend({
     hitCreep: function(response){
                 if(response.b.health <= game.data.playerAttack){
                     //adds one gold for a creep kill
-                    game.data.gold += 1;                    
+                    game.data.gold += 1;
                 }
                 response.b.loseHealth(game.data.playerAttack);           
     }   
