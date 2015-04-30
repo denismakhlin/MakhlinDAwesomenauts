@@ -60,7 +60,7 @@ game.SpendGold = Object.extend({
        me.audio.stopTrack("run-sound");
        me.state.pause(me.state.PLAY);
        game.data.pausePos = me.game.viewport.localToWorld(0, 0);
-       game.data.buyscreen2 = new me.Sprite(game.data.pausePos.x, game.data.pausePos.y, me.loader.getImage('gold-screen'));
+       game.data.buyscreen2 = new me.Sprite(game.data.pausePos.x, game.data.pausePos.y, me.loader.getImage('pause'));
        game.data.buyscreen2.updateWhenPaused = true;
        game.data.buyscreen2.setOpacity(0.8);
        me.game.world.addChild(game.data.buyscreen2, 34);
@@ -93,8 +93,8 @@ game.SpendGold = Object.extend({
   setBuyText2: function(){
        game.data.buytext2 = new (me.Renderable.extend({
                     init: function(){
-                        this._super(me.Renderable, 'init', [game.data.pausePos.x, game.data.pausePos.y, 10, 300, 50]);
-                        this.font = new me.Font("Arial", 26, "white");
+                        this._super(me.Renderable, 'init', [20, 30, 300, 50]);
+                        this.font = new me.Font("Arial", 26, "red");
                         this.updateWhenPaused = true;
                         this.alwaysUpdate = true;
                     },

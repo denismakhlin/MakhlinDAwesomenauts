@@ -8,9 +8,12 @@ game.ExperienceManager = Object.extend({
         if(game.data.win === true && !this.gameover){
             this.gameOver(true);
             alert("YOU WIN!");
+            me.game.playTrack("win-song");
+            
         }else if(game.data.win === false && !this.gameover){
             this.gameOver(false);
             alert("YOU LOSE!");
+            me.game.playTrack("win-song");
         }
         
         return true;

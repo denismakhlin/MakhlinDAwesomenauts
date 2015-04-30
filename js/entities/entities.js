@@ -24,13 +24,13 @@ game.PlayerEntity = me.Entity.extend({
                 }
             }]);
     },
-
+    //below the function has a timer for the amount of attacks
     setPlayerTimers: function(){
         this.now = new Date().getTime();
         this.lastHit = this.now;
         this.lastAttack = new Date().getTime();
     },
-    
+    //below calls on  the players health attack and speed
     setAttributes: function(){
         this.health = game.data.playerHealth;
 
@@ -38,37 +38,37 @@ game.PlayerEntity = me.Entity.extend({
         
         this.attack = game.data.playerAttack;
     },
-    
+    //below keeps track of which direction characterr is going
     setFlags: function(){
         //Keeps track of which direction the character is going
         this.facing = "right";
         this.dead = false;
         this.attacking = false;
     },  
-    
+    //below the function adds animation by images from resources
     addAnimation: function(){
         this.renderable.addAnimation("idle", [78]);
         this.renderable.addAnimation("walk", [117, 118, 119, 120, 121, 122, 124, 125], 80);
         this.renderable.addAnimation("attack", [65, 66, 67, 68, 69, 70, 71, 72], 80);  
     }, 
-    
+    //below calls on functions that update to my character
     update: function(delta) {
         this.now = new Date().getTime();
         
         this.dead = this.checkIfDead();
-        
+        //sets bindeed keys to animation
         this.checkKeyPressesAndMove();
-        
+        //sets animation
         this.setAnimation();
-
+        //sets collision with creep and base
         me.collision.check(this, true, this.collideHandler.bind(this), true);
         this.body.update(delta);
-
+        //updates
         this._super(me.Entity, "update", [delta]);
 
         return true;
     },
-    
+    //checks if my player is dead if health is equal or less than zero
     checkIfDead: function(){
       if (this.health <= 0){
             return true;
@@ -77,15 +77,17 @@ game.PlayerEntity = me.Entity.extend({
     },
     
     checkKeyPressesAndMove: function(){
+        //if the binded key right is pressed player will mover right
         if (me.input.isKeyPressed("right")) {
             this.moveRight();
-            
+        //if the binded key left is pressed player will mover left  
         } else if (me.input.isKeyPressed("left")) {
             this.moveLeft();
         } else {
             this.body.vel.x = 0;
         }
-
+        //if the binded key jump is pressed player will jump up and it doesnt
+        //allow me to double jump or jump while falling
         if (me.input.isKeyPressed('jump')) {
             if (!this.body.jumping && !this.body.falling) {
                 this.jump();
@@ -94,9 +96,10 @@ game.PlayerEntity = me.Entity.extend({
         }  
         
         
-      
+      //this will attack when the binded key attck is pressed
         this.attacking = me.input.isKeyPressed("attack");
-        
+        //bellow I am saying that iff the animation is attacking tthan it will
+        //end the running sound
         if (this.renderable.isCurrentAnimation('attack')) {
             me.audio.stopTrack("run-sound");
         }
@@ -118,7 +121,7 @@ game.PlayerEntity = me.Entity.extend({
             this.body.vel.x -= this.body.accel.x * me.timer.tick;
             this.flipX(false);
     },
-    
+    //makes jump animation smooth
     jump: function(){
       this.body.vel.y = -this.body.maxVel.y * me.timer.tick;
       this.body.jumping = true;  
@@ -136,24 +139,29 @@ game.PlayerEntity = me.Entity.extend({
                 this.renderable.setAnimationFrame();
             }
         }
-
+        //below it is saying I will not have a walking animation while I am
+        //attacking..It also plays a running sound while I am walking
         else if (this.body.vel.x !== 0 && !this.renderable.isCurrentAnimation("attack")) {
             if (!this.renderable.isCurrentAnimation("walk")) {
                 this.renderable.setCurrentAnimation("walk");
                 me.audio.playTrack("run-sound");
             }
+        //this is saying that ,y character will be idle if it is not attacking
+        //and if it is idle then it will play the runsound
         } else if (!this.renderable.isCurrentAnimation("attack")) {
             this.renderable.setCurrentAnimation("idle");
             me.audio.stopTrack("run-sound"); 
+        //this ends my run sound if it is attacking
         }  else if (this.renderable.isCurrentAnimation("attack")){
             me.audio.stopTrack("run-sound");
         } 
     },
-    
+    //this says that my health will lose 'health' if it is having damage onto it
     loseHealth: function(damage){
         this.health = this.health - damage;
     },
-
+    //this allows me to collide witth my creeps and bases so it will stop when
+    //it collides with me
     collideHandler: function(response){
         if(response.b.type==='EnemyBaseEntity'){
             this.collideWithEnemyBase(response);
@@ -184,7 +192,8 @@ game.PlayerEntity = me.Entity.extend({
                 
             }
         },
-        
+    //below it is saying that if I run into my creep then it will stop it's
+    //movement
     collideWithEnemyCreep: function(response){
        
             var xdif = this.pos.x - response.b.pos.x;
@@ -197,7 +206,7 @@ game.PlayerEntity = me.Entity.extend({
             };
 
     },
-    
+    //this is tthe actual code that stops the movem
     stopMovement: function(xdif){
         if (xdif>0){
                 if(this.facing==="left"){

@@ -33,6 +33,7 @@ game.resources = [
         {name: "oldhouse", type:"image", src: "data/img/oldhouse.png"},
         {name: "creep1", type:"image", src: "data/img/skeletonDagger.png"},
         {name: "player", type:"image", src: "data/img/myplayer.png"},
+        {name: "pause", type:"image", src: "data/img/pause.png"},
 	/* Atlases 
 	 * @example
 	 * {name: "example_tps", type: "tps", src: "data/img/example_tps.json"},
@@ -54,7 +55,8 @@ game.resources = [
         {name: "load-music", type: "audio", src: "data/bgm2/"},
         {name: "run-sound", type: "audio", src: "data/bgm3/"},
         {name: "swoosh", type: "audio", src: "data/bgm4/"},
-        {name: "nature", type: "audio", src: "data/bgm5/"}
+        {name: "nature", type: "audio", src: "data/bgm5/"},
+        {name: "win-song", type: "audio", src: "data/bgm6/"}
 	 	
 
 	/* Sound effects. 
